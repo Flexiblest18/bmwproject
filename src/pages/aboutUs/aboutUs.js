@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import BANNER from "../../../src/assets/images/photo_2024-03-16_21-24-07.jpg";
+import BANNER from "../../../src/assets/images/aboutus.jpg";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 
