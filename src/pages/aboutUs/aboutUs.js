@@ -50,7 +50,7 @@ const AboutUs = () => {
                     sx={{ fontFamily: "poppins" }}
                     mt={10}
                   >
-                    Mr. Hean Sovanndara
+                    Mr. Chhun Yanndara
                   </Typography>
                   <Typography sx={{ fontFamily: "poppins" }}>
                     I'm a General Manager of BMW. All of you can Contact We have
