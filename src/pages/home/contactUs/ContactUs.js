@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TextField, Button, Typography, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
+import Footer from "../../../components/footer/Footer";
 
 export default function ContactUs() {
   const [name, setName] = useState("");
@@ -17,7 +18,7 @@ export default function ContactUs() {
     <>
       <Navbar />
       <Box
-        sx = {{
+        sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -57,10 +58,13 @@ export default function ContactUs() {
               multiline
               rows={4}
             />
-            <Button variant="contained" type="submit" sx={{ mt: 2 }}>Submit</Button>
+            <Button variant="contained" type="submit" sx={{ mt: 2 }}>
+              Submit
+            </Button>
           </form>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 }

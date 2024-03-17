@@ -1,14 +1,14 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import BANNER from "../../../../src/assets/images/banner.png";
 
 const FirstSection = () => {
   return (
-    <React.Fragment>
+    <Container maxWidth="xl">
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={5}>
           <Box display={"flex"} alignItems={"center"} height={"600px"}>
-            <Box ml={"2rem"}>
+            <Box>
               <Typography
                 variant="h4"
                 fontWeight={600}
@@ -22,7 +22,7 @@ const FirstSection = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={6} lg={7}>
           <Box height="600px" width={"100%"}>
             <img
               src={BANNER}
@@ -30,15 +30,16 @@ const FirstSection = () => {
               height={"100%"}
               width="100%"
               style={{
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
+                // backgroundSize: "cover",
+                // backgroundRepeat: "no-repeat",
+                // backgroundPosition: "center",
+                objectFit: "cover",
               }}
             />
           </Box>
         </Grid>
       </Grid>
-    </React.Fragment>
+    </Container>
   );
 };
 

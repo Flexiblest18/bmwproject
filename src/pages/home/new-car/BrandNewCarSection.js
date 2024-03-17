@@ -7,6 +7,7 @@ import M5 from "../../../assets/images/m5.jpg";
 import M6 from "../../../assets/images/m6.jpg";
 import GT4 from "../../../assets/images/bmw_m4_gt4.jpg";
 import i8 from "../../../assets/images/i8.jpg";
+import { useNavigate } from "react-router-dom";
 
 const cars = [
   {
@@ -48,6 +49,7 @@ const cars = [
 ];
 
 const BrandNewCarSection = () => {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Container maxWidth="xl">
@@ -72,6 +74,7 @@ const BrandNewCarSection = () => {
           <Button
             sx={{ bgcolor: "#4b7bec", color: "#fff" }}
             variant="contained"
+            onClick={() => navigate("/car")}
           >
             See All
           </Button>

@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Container,
+  Hidden,
   IconButton,
   Menu,
   MenuItem,
@@ -50,6 +51,8 @@ const Navbar = () => {
     },
   ];
 
+  const path = window.location.pathname;
+
   return (
     <AppBar
       position="fixed"
@@ -60,20 +63,31 @@ const Navbar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box height={"40px"} width={"auto"}>
-            <img src={LOGO} alt="logo" width={"100%"} height={"100%"} />
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              alignItems: "center",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#000"
             >
               <MenuIcon />
             </IconButton>
+            <Box
+              height={"40px"}
+              width={"auto"}
+              onClick={() => navigate("/")}
+              sx={{ cursor: "pointer" }}
+            >
+              <img src={LOGO} alt="logo" width={"100%"} height={"100%"} />
+            </Box>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -97,19 +111,39 @@ const Navbar = () => {
                   key={page?.name}
                   onClick={() => handleClickMenu(page?.route)}
                 >
-                  <Typography textAlign="center" color={"#000"}>
+                  <Typography
+                    textAlign="center"
+                    color={page?.name === path ? "#4b7bec" : "#000"}
+                  >
                     {page?.name}
                   </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+          <Hidden mdDown>
+            <Box
+              height={"40px"}
+              width={"auto"}
+              onClick={() => navigate("/")}
+              sx={{ cursor: "pointer" }}
+            >
+              <img src={LOGO} alt="logo" width={"100%"} height={"100%"} />
+            </Box>
+          </Hidden>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page?.name}
                 onClick={() => handleClickMenu(page?.route)}
-                sx={{ my: 2, color: "#000", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: page?.route === path ? "#4b7bec" : "#000",
+                  display: "block",
+                  "&:hover": {
+                    color: "#4b7bec",
+                  },
+                }}
               >
                 {page?.name}
               </Button>
