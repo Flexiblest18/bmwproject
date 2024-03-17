@@ -130,15 +130,15 @@ const Navbar = () => {
           <Hidden mdDown>
             <Box
               height={"40px"}
-              width={"auto"}
+              width={"40px"}
               onClick={() => navigate("/")}
               sx={{ cursor: "pointer" }}
             >
               <img
                 src={LOGO}
                 alt="logo"
-                width={"100%"}
-                height={"100%"}
+                width={"40px"}
+                height={"40px"}
                 style={{ objectFit: "cover" }}
               />
             </Box>
