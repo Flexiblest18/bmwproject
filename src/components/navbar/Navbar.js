@@ -86,7 +86,13 @@ const Navbar = () => {
               onClick={() => navigate("/")}
               sx={{ cursor: "pointer" }}
             >
-              <img src={LOGO} alt="logo" width={"100%"} height={"100%"} />
+              <img
+                src={LOGO}
+                alt="logo"
+                width={"100%"}
+                height={"100%"}
+                style={{ objectFit: "cover" }}
+              />
             </Box>
             <Menu
               id="menu-appbar"
@@ -128,7 +134,13 @@ const Navbar = () => {
               onClick={() => navigate("/")}
               sx={{ cursor: "pointer" }}
             >
-              <img src={LOGO} alt="logo" width={"100%"} height={"100%"} />
+              <img
+                src={LOGO}
+                alt="logo"
+                width={"100%"}
+                height={"100%"}
+                style={{ objectFit: "cover" }}
+              />
             </Box>
           </Hidden>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
